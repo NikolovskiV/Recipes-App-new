@@ -1,0 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+h1 {
+  text-shadow: 2px 2px 5px rgb(98, 159, 238);
+}

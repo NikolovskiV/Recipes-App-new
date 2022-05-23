@@ -1,0 +1,15 @@
+h3 {
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+  color: rgba(11, 53, 190, 0.932);
+}
+
+span {
+  font-weight: bold;
+  margin-top: 80px;
+}
+
+.cart-item {
+  margin-left: 100px;
+}

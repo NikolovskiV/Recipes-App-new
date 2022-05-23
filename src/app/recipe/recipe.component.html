@@ -1,0 +1,140 @@
+<app-nav></app-nav>
+<div class="container-lg">
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a routerLink="/cart" class="btn btn-outline-info mt-4 me-md-2">
+      <i class="material-icons"></i>Saved recipes
+    </a>
+  </div>
+  <div class="text-center">
+    <a (click)="changeRoute()" class="btn btn-outline-secondary mt-3">Back</a>
+  </div>
+  <h3 class="text-center my-5">
+    {{ recipes?.strMeal }}
+    <!-- {{ recipes ? recipes.idMeal : null }} -->
+  </h3>
+  <h5 class="text-center">{{ recipes?.strArea }}</h5>
+  <div class="my-3 d-flex justify-content-center">
+    <img class="img-fluid" src="{{ recipes?.strMealThumb }}" />
+  </div>
+  <div *ngIf="recipes" class="text-center">
+    <button type="button" class="btn btn-outline-primary" disabled={{disabled}} *ngIf="!loginshow" (click)="addToCart()">
+      {{buttonText}}
+    </button>
+    <button type="button" class="btn btn-outline-primary" disabled={{disabled}} *ngIf="loginshow" (click)="showAlert()">
+      {{buttonText}}
+    </button>
+    <a class="nav-link active" aria-current="page" data-toggle="modal" data-target="#recipemodal" id="showlistbutton" style="display: none;">
+      Create List
+    </a>
+  </div>
+
+  <div class="container mt-3">
+    <h2>Recipes</h2>
+    <br />
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home">Ingredient</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu1">How to prepare</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="home" class="container tab-pane active">
+        <br />
+        <h3></h3>
+        <p>
+          <b>{{ recipes?.strMeasure1 }}</b> {{ recipes?.strIngredient1 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure2 }}</b> {{ recipes?.strIngredient2 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure3 }}</b> {{ recipes?.strIngredient3 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure4 }}</b> {{ recipes?.strIngredient4 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure5 }}</b> {{ recipes?.strIngredient5 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure6 }}</b> {{ recipes?.strIngredient6 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure7 }}</b> {{ recipes?.strIngredient7 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure8 }}</b> {{ recipes?.strIngredient8 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure9 }}</b> {{ recipes?.strIngredient9 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure10 }}</b> {{ recipes?.strIngredient10 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure11 }}</b> {{ recipes?.strIngredient11 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure12 }}</b> {{ recipes?.strIngredient12 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure13 }}</b> {{ recipes?.strIngredient13 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure14 }}</b> {{ recipes?.strIngredient14 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure15 }}</b> {{ recipes?.strIngredient15 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure16 }}</b> {{ recipes?.strIngredient16 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure17 }}</b> {{ recipes?.strIngredient17 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure18 }}</b> {{ recipes?.strIngredient18 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure19 }}</b> {{ recipes?.strIngredient19 }}
+        </p>
+        <p>
+          <b>{{ recipes?.strMeasure20 }}</b> {{ recipes?.strIngredient20 }}
+        </p>
+      </div>
+      <div id="menu1" class="container tab-pane fade">
+        <br />
+        <h3></h3>
+        <p>{{ recipes?.strInstructions }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="recipemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">ListNames</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-check" *ngFor="let listname of itemnameslist">
+            <input type="checkbox" class="form-check-input" id="'permissions'+index" name="aaa[]" [(ngModel)]="listname.checked" value="{{listname['name']}}" (change)="getselectedlist($event, listname['name'])">
+            <label class="form-check-label">{{listname['name']}}</label>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closebutton2">Close</button>
+        <button type="button" class="btn btn-primary" (click)="saveitems()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

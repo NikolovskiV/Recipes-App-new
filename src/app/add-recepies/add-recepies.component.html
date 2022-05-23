@@ -1,0 +1,29 @@
+<app-nav></app-nav>
+<h1 class="text-center mt-5">{{mealName}}</h1>
+<div class="border-bottom border-dark border-5 mt-3 ml-5 mr-5"></div>
+<div class="text-center">
+<a routerLink="/dashboard" class="btn btn-outline-secondary mt-3">Back to All Recepi</a>
+</div>
+<div class="container">
+  <div class="row d-flex justify-content-center mt-5">
+<div *ngFor="let recipe of recipes">
+    <div class="col mb-2">
+    <div class="card border-info text-center" style="max-width: 13rem;">
+  <div class="card-header"><a class="font-weight-bold" routerLink="/recepies/{{ recipe.idMeal }}">{{ recipe.strMeal }} </a></div>
+  <div class="card-body text-info">
+    <img src="{{ recipe.strMealThumb }}" class="img-fluid"/>
+  </div>
+
+  </div>
+</div>
+</div>
+  </div>
+</div>
+
+
+<!-- <div class="p-2 m-2">
+<button type="button" class="btn btn-primary btn-outline-warning m-2">Save</button>
+<button type="button" class="btn btn-warning btn-outline-success m-2">Edit</button>
+<button type="button" class="btn btn-danger tn-outline-primary m-2">Delete</button>
+</div> -->
+

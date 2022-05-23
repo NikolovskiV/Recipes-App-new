@@ -1,0 +1,16 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+h6 {
+  color: rgb(187, 192, 194);
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+h4 {
+    text-shadow: 2px 2px 5px rgba(240, 154, 243, 0.658);
+}
+.img-fluid{
+  cursor: pointer;
+}

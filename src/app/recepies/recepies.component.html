@@ -1,0 +1,203 @@
+<app-nav></app-nav>
+<div class="sticky-xl-top text-center mt-4">
+  <h3>Hitta ditt recept</h3>
+</div>
+<div class="container">
+  <div class="meal-wrapper">
+    <div class="meal-search">
+      <h2 class="title"></h2>
+      <div class="meal-search-box">
+        <input
+          type="text"
+          class="search-control"
+          placeholder="Enter an ingredient"
+          id="search-input"
+        />
+        <button type="submit" class="search-bat bat" id="search-bat">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <!-- </div>
+
+
+<div class="container"> -->
+      <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-cow fa-3x"></i><br> -->
+            <h4>Beef</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResult"
+              (click)="changeRoute('Beef')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="far fa-drumstick-bite fa-3x"></i><br> -->
+            <h4>Chicken</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultFour"
+              (click)="changeRoute('Chicken')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="far fa-ice-cream fa-3x"></i><br> -->
+            <h4>Dessert</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultTwo"
+              (click)="changeRoute('Dessert')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="far fa-sheep fa-3x"></i><br> -->
+            <h4>Lamb</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultSex"
+              (click)="changeRoute('Lamb')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-spaghetti fa-3x"></i><br> -->
+            <h4>Pasta</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultOta"
+              (click)="changeRoute('Pasta')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-cow fa-2x"></i><br> -->
+            <h4>Miscellaneous</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultNio"
+              (click)="changeRoute('Miscellaneous')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="far fa-pig fa-3x"></i><br> -->
+            <h4>Pork</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultThree"
+              (click)="changeRoute('Pork')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="far fa-fish fa-3x"></i><br> -->
+            <h4>Seafood</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultFive"
+              (click)="changeRoute('Seafood')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-cow fa-2x"></i><br> -->
+            <h4>Side</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultTio"
+              (click)="changeRoute('Side')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-cow fa-2x"></i><br> -->
+            <h4>Starter</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultElva"
+              (click)="changeRoute('Starter')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-cow fa-2x"></i><br> -->
+            <h4>Vegan</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultTolw"
+              (click)="changeRoute('Vegan')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-cow fa-2x"></i><br> -->
+            <h4>Vegetarian</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultTreton"
+              (click)="changeRoute('Vegetarian')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-cow fa-2x"></i><br> -->
+            <h4>Breakfast</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultFurtom"
+              (click)="changeRoute('Breakfast')"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light my-3">
+            <!-- <i class="fal fa-cow fa-2x"></i><br> -->
+            <h4>Goat</h4>
+            <img
+              class="img-fluid"
+              [src]="imageFromResultFemton"
+              (click)="changeRoute('Goat')"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="card-footer bg-transparent border-black text-center font-weight-bold font-italic"
+    >
+      <p>Welcome to Recepie App</p>
+      <h6>Made by: Vande Nikolovski</h6>
+    </div>
+  </div>
+</div>

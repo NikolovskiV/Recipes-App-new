@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<h3>Cart</h3>
+
+<div class="text-center">
+    <a (click)="changeRoute()" class="btn btn-outline-secondary mt-3">Back</a>
+</div>
+<div class="row mt-5" style="justify-content: center;">
+    <ul class="list-group" style="min-width: 400px;">
+        <li *ngFor="let listname of listnames" class="list-group-item">
+            <a routerLink="/list/{{listname['id']}}">{{listname['name']}}</a>
+        </li>
+    </ul>
+</div>
+
+
+
+<!-- <div class="text-center">
+<a routerLink="/recepies/:id" class="btn btn-outline-secondary mt-3">Back to All Recepi</a>
+</div> -->

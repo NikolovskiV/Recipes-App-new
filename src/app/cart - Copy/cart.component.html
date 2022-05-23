@@ -1,0 +1,120 @@
+<app-nav></app-nav>
+<h3>Cart</h3>
+
+<div class="text-center">
+    <a (click)="changeRoute()" class="btn btn-outline-secondary mt-3">Back</a>
+</div>
+<div class="row">
+    <div class="col-md-4 col-xs-12">
+        <div class="cart-item my-4" *ngFor="let item of items; index as i"> <!--Added ; index as i to get hold of index -->
+            <div class="d-flex justify-content-center" style="max-width:100px;">
+                <img class="img-fluid" src="{{ item?.strMealThumb }}" />
+            </div>
+            <span style="cursor:pointer;" (click)="selecteItem(item.idMeal)">{{ item.strMeal}}</span>
+            <div class="button">
+                <button type="button" class="btn btn-outline-primary btn-sm" (click)="removeItem(i)">Delete</button>
+            </div>
+        </div>
+        <br>
+    </div>
+  
+
+    <div class="col-md-8 col-xs-12" style="padding-left: 50px;">
+        <h5 class="">{{ recipes?.strMeal }}</h5>
+        <div class="my-3 d-flex justify-content-center" style="max-width:200px;">
+            <img class="img-fluid" src="{{ recipes?.strMealThumb }}" />
+        </div>
+        <div class="container" *ngIf="recipes">
+            <h2>Recipes</h2>
+            <br />
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">Ingredient</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu1">How to prepare</a>
+                </li>
+            </ul>
+
+    <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active">
+                    <br />
+                    <h3></h3>
+                    <p>
+                        <b>{{ recipes?.strMeasure1 }}</b> {{ recipes?.strIngredient1 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure2 }}</b> {{ recipes?.strIngredient2 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure3 }}</b> {{ recipes?.strIngredient3 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure4 }}</b> {{ recipes?.strIngredient4 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure5 }}</b> {{ recipes?.strIngredient5 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure6 }}</b> {{ recipes?.strIngredient6 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure7 }}</b> {{ recipes?.strIngredient7 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure8 }}</b> {{ recipes?.strIngredient8 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure9 }}</b> {{ recipes?.strIngredient9 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure10 }}</b> {{ recipes?.strIngredient10 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure11 }}</b> {{ recipes?.strIngredient11 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure12 }}</b> {{ recipes?.strIngredient12 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure13 }}</b> {{ recipes?.strIngredient13 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure14 }}</b> {{ recipes?.strIngredient14 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure15 }}</b> {{ recipes?.strIngredient15 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure16 }}</b> {{ recipes?.strIngredient16 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure17 }}</b> {{ recipes?.strIngredient17 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure18 }}</b> {{ recipes?.strIngredient18 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure19 }}</b> {{ recipes?.strIngredient19 }}
+                    </p>
+                    <p>
+                        <b>{{ recipes?.strMeasure20 }}</b> {{ recipes?.strIngredient20 }}
+                    </p>
+                </div>
+                <div id="menu1" class="container tab-pane fade">
+                    <br />
+                    <h3></h3>
+                    <p>{{ recipes?.strInstructions }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- <div class="text-center">
+<a routerLink="/recepies/:id" class="btn btn-outline-secondary mt-3">Back to All Recepi</a>
+</div> -->

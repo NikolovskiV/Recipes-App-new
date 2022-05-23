@@ -1,0 +1,17 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+img {
+  width: 140px;
+  height: 140px;
+  justify-content: center;
+}
+
+p {
+  margin-right: 250px;
+  font-size: 12px;
+}
+
+h2 {
+  text-shadow: 2px 2px 5px rgba(238, 108, 108, 0.514);
+}

@@ -1,0 +1,35 @@
+<app-nav></app-nav>
+<form class="form mt-3" >
+  <div class="form-group-one">
+    <h2>Welcome to Recepie App</h2>
+    <h3>Registration</h3>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]="name" />
+    <div *ngIf="nameError" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{nameError}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="email" />
+    <div *ngIf="emailError" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{emailError}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password"/>
+    <div *ngIf="passwordError" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{passwordError}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="button" (click)="register()" >Register</button>
+</form>
